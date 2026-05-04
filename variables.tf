@@ -19,8 +19,8 @@ variable "vpc_additional_cidrs" {
 
 variable "public_subnets" {
   type = list(object({
-    name = string
-    cidr = string
+    name              = string
+    cidr              = string
     availability_zone = string
   }))
   description = "Lista de Public Subnets da VPC"
@@ -28,8 +28,8 @@ variable "public_subnets" {
 
 variable "private_subnets" {
   type = list(object({
-    name = string
-    cidr = string
+    name              = string
+    cidr              = string
     availability_zone = string
   }))
   description = "Lista de Private Subnets da VPC"
@@ -37,10 +37,10 @@ variable "private_subnets" {
 
 variable "database_subnets" {
   type = list(object({
-    name = string
-    cidr = string
+    name              = string
+    cidr              = string
     availability_zone = string
   }))
-  default = []
+  default     = []
   description = "Lista de Private Subnets da VPC"
 }
